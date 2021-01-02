@@ -14,17 +14,14 @@ const TodoList = ({ todos, onDeleted, onToggleImportant, onToggleDone }) => {
         {...itemProps } 
         onDeleted ={ () => onDeleted(id) }
         onToggleImportant={ () => onToggleImportant(id) }
-        onToggleDone={ () => onToggleDone(id) }
-
-
-        />
+        onToggleDone={ () => onToggleDone(id) }/>
       </li>
     );
   });
 
   return (
     <ul className="list-group todo-list">
-      { elements }
+      {elements}
     </ul>
   );
 };

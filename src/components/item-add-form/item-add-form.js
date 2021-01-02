@@ -9,21 +9,14 @@ export default class ItemAddForm extends Component {
   }
 
   onLabelChange = (e) => {
-    console.log(e.target.value);
-
     this.setState({
       label: e.target.value
-    })
-
-    // return {
-    //   label: 
-    // }
+    });
   }
 
   onSubmit = (e) => {
     e.preventDefault();
     this.props.onItemAdded(this.state.label)
-    console.log(e.target);
   }
   
 
@@ -38,11 +31,9 @@ export default class ItemAddForm extends Component {
               placeholder="What needs to be done" />
         <button 
             className="btn btn-outline-secondary"
-            // onClick={ () => this.props.onItemAdded('Hello World')}
         > Add Item
         </button>
       </form>
     )
   }
 }
-
